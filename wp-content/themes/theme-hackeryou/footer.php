@@ -13,5 +13,6 @@
 </script>
 
 <?php wp_footer(); ?>
+	</div> <!-- end bg -->
 </body>
 </html>

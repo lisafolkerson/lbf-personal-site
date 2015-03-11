@@ -347,7 +347,7 @@ body {
   padding: 1px; }
 
 .main {
-  margin: 12% 10%; }
+  margin: 0 10%; }
 
 .container {
   max-width: 1200px;
@@ -358,8 +358,7 @@ body {
   background-repeat: no-repeat;
   background-position: 50%;
   background-attachment: fixed;
-  height: 100vh;
-  padding-top: 0;
+  padding-top: 1px;
   text-align: center; }
 
 .content {
@@ -379,11 +378,11 @@ a:hover {
 
 /* paragraphs */
 p {
-  line-height: 1.5; }
+  line-height: 1.5;
+  font-family: 'Chivo', sans-serif; }
 
 /*blockquotes*/
 blockquote {
-  background: #F7F7F7;
   margin: 0;
   padding: 20px; }
 
@@ -446,50 +445,60 @@ pre {
   right: 0; }
 
 header {
-  background: thistle; }
+  font-family: 'Inconsolata', courier, monospace; }
   header .mainLogo {
-    float: left;
     max-width: 42%;
     position: relative;
-    left: -12.5%;
-    top: -20px; }
+    left: -80px;
+    top: -5px; }
+  header ul {
+    margin: 70px 20px;
+    padding: 0;
+    display: inline-block;
+    float: right; }
+    header ul li {
+      display: inline-block;
+      margin-right: 10px;
+      width: 130px;
+      color: black;
+      padding: 15px;
+      border: 2px solid black; }
+      header ul li a:focus {
+        color: white;
+        width: 100%; }
+    header ul li:hover {
+      background: #DCB3A5;
+      border: 1px solid #DCB3A5;
+      color: white; }
+
+.menu:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
+/* =============================================================================
+            Portfolio Body
+   ========================================================================== */
+.home blockquote {
+  text-align: justify;
+  float: right;
+  width: 65%; }
+.home .wp-image-72 {
+  width: 75%;
+  float: right; }
 
 /* =============================================================================
                    Sidebar
    ========================================================================== */
-.sidebar {
-  width: 30%;
-  float: left; }
-
-.sidebar ul {
-  margin: 0;
-  padding: 0; }
-
-.sidebar ul li {
-  list-style: none; }
-
 /* =============================================================================
                    Footer
    ========================================================================== */
 footer {
   clear: both; }
-
-/* =============================================================================
-                   Navigation
-   ========================================================================== */
-ul.menu {
-  margin: 0;
-  padding: 0; }
-
-ul.menu li {
-  display: inline;
-  margin-right: 10px; }
-
-ul.menu li a {
-  color: #333;
-  padding: 10px;
-  background: #333;
-  color: white; }
+  footer p {
+    margin-bottom: 0px; }
 
 /* =============================================================================
                 Blog Styles
