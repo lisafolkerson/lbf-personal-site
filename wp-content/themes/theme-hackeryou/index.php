@@ -5,11 +5,8 @@
   <div class="container">
 
     <div class="content">
-    		<?php get_template_part( 'loop', 'index' );	?>
+    		<?php get_template_part( 'custo-b-loop', 'index' );	?>
     </div> <!--/.content -->
-
-    <?php get_sidebar(); ?>
-
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 

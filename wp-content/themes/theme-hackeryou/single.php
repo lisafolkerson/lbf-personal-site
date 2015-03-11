@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 
 <div class="main">
-  <div class="container">
-
+  <div class="container container-with-background clearfix" style="background-image: url(<?php bloginfo('template_directory'); ?>/img/whiteMarble.png)">
     <div class="content">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
@@ -38,7 +37,7 @@
 
     </div> <!-- /.content -->
 
-    <?php get_sidebar(); ?>
+    <?php //get_sidebar(); ?>
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->

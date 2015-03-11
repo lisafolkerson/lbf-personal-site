@@ -15,13 +15,16 @@
 
 
 <body <?php body_class(); ?>>
-
+<div class="border b-top"></div>
+<div class="border b-left"></div>
+<div class="border b-right"></div>
+<div class="border b-bottom"></div>
 <header>
   <div class="container">
-    <img src="img/lili_dev_logo.png" alt="Lisa Folkerson">
-    <h1>
       <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
+    <img class="mainLogo" src="<?php bloginfo('template_directory'); ?>/img/lili_dev_logo.png" alt="Lisa Folkerson">
+    <h1>
+        <?php // bloginfo( 'name' ); ?>
       </a>
     </h1>
 
