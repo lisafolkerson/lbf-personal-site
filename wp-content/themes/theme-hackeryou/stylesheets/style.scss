@@ -52,7 +52,7 @@ header {
   .mainLogo {
     max-width: 42%;
     position: relative;
-    left: -80px;
+    left: -100px;
     top: -5px;
   }
 
@@ -69,6 +69,15 @@ header {
       color: black;
       padding:15px;
       border: 2px solid black;
+
+      a {
+        text-decoration: none;
+        width: 100%;
+      }
+
+      a:hover {
+        color: white;
+      }
       
       a:focus {
         color: white;
@@ -98,14 +107,19 @@ header {
 
 .home {
   blockquote {
-    text-align: justify;
+    text-align: left;
     float: right;
     width: 65%;
+    font-size: 1.4rem;
   }
 
   .wp-image-72 {
     width: 75%;
     float: right;
+  }
+
+  .featuredPost {
+    width: 25%;
   }
 }  
 

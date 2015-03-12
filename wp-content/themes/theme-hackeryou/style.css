@@ -449,7 +449,7 @@ header {
   header .mainLogo {
     max-width: 42%;
     position: relative;
-    left: -80px;
+    left: -100px;
     top: -5px; }
   header ul {
     margin: 70px 20px;
@@ -463,6 +463,11 @@ header {
       color: black;
       padding: 15px;
       border: 2px solid black; }
+      header ul li a {
+        text-decoration: none;
+        width: 100%; }
+      header ul li a:hover {
+        color: white; }
       header ul li a:focus {
         color: white;
         width: 100%; }
@@ -482,12 +487,15 @@ header {
             Portfolio Body
    ========================================================================== */
 .home blockquote {
-  text-align: justify;
+  text-align: left;
   float: right;
-  width: 65%; }
+  width: 65%;
+  font-size: 1.4rem; }
 .home .wp-image-72 {
   width: 75%;
   float: right; }
+.home .featuredPost {
+  width: 25%; }
 
 /* =============================================================================
                    Sidebar
