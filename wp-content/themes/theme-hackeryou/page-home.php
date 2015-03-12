@@ -8,14 +8,14 @@ get_header();  ?>
 
 <div class="main clearfix">
   <div class="container clearfix">
-      <div class="aboutMe">
+      <div class="aboutMe clearfix">
         <?php // Start the loop ?>
         <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
     <!--       <h2><?php the_title(); ?></h2> -->
       <?php the_content(); ?>
       </div> <!-- end .aboutMe -->
-      
+
       <div class="portfolioPieces" id="portfolio">
 
         <?php //going to pull in the latest 4 blog posts ?>
@@ -27,7 +27,16 @@ get_header();  ?>
         <?php if ($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post(); ?>
 
         	<div class="featuredPost">
-        		<h2><?php the_title() ?></h2>
+            <div class="ft-img">
+          		<?php the_post_thumbnail('custom_size'); ?>
+            </div> <!-- end .ft-img-->
+            <div class="rightInfo">
+              <h2><?php the_title() ?></h2>
+              <p class="tags"><?php the_terms($post->ID, 'technologies', '', ''); ?></p>
+              <p><?php the_field( 'short_desc' ); ?></p>
+            </div> <!--end .rightInfo -->
+
+
         	</div> <!--end featured post-->
         	
         <?php endwhile //end custom loop ?>

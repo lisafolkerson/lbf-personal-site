@@ -451,30 +451,22 @@ header {
     position: relative;
     left: -100px;
     top: -5px; }
-  header ul {
-    margin: 70px 20px;
-    padding: 0;
-    display: inline-block;
-    float: right; }
-    header ul li {
-      display: inline-block;
-      margin-right: 10px;
+  header .menu {
+    display: inline;
+    position: relative;
+    max-width: 50%;
+    float: right;
+    right: 5%;
+    top: 60px; }
+    header .menu a {
       width: 130px;
-      color: black;
-      padding: 15px;
-      border: 2px solid black; }
-      header ul li a {
-        text-decoration: none;
-        width: 100%; }
-      header ul li a:hover {
-        color: white; }
-      header ul li a:focus {
-        color: white;
-        width: 100%; }
-    header ul li:hover {
-      background: #DCB3A5;
+      border: 1px solid black;
+      padding: 10px;
+      display: inline-block; }
+    header .menu a:hover {
       border: 1px solid #DCB3A5;
-      color: white; }
+      color: white;
+      background: #DCB3A5; }
 
 .menu:after {
   content: " ";
@@ -486,6 +478,9 @@ header {
 /* =============================================================================
             Portfolio Body
    ========================================================================== */
+.aboutMe img {
+  width: 100%; }
+
 .home blockquote {
   text-align: left;
   float: right;
@@ -494,12 +489,29 @@ header {
 .home .wp-image-72 {
   width: 75%;
   float: right; }
-.home .featuredPost {
-  width: 25%; }
+.home .portfolioPieces {
+  width: 100%; }
+  .home .portfolioPieces .featuredPost {
+    margin-top: 100px;
+    width: 100%;
+    display: inline-block;
+    font-family: 'Inconsolata', courier, monospace;
+    text-align: left; }
+    .home .portfolioPieces .featuredPost .ft-img {
+      width: 59%;
+      float: left;
+      padding-right: 1%;
+      height: 100%;
+      overflow: hidden;
+      border-right: 1px solid black; }
+    .home .portfolioPieces .featuredPost .rightInfo {
+      height: 100%;
+      width: 40%;
+      float: left;
+      padding: 20px; }
+    .home .portfolioPieces .featuredPost h2 {
+      text-decoration: underline; }
 
-/* =============================================================================
-                   Sidebar
-   ========================================================================== */
 /* =============================================================================
                    Footer
    ========================================================================== */
@@ -512,7 +524,6 @@ footer {
                 Blog Styles
    ========================================================================== */
 .blog {
-  background: #FFFBDE;
   padding: 1px; }
   .blog .content {
     display: block;

@@ -46,7 +46,6 @@
 
 
 header {
-  // background: thistle;
   @include monoSp;
 
   .mainLogo {
@@ -55,40 +54,25 @@ header {
     left: -100px;
     top: -5px;
   }
-
-  ul {
-    margin: 70px 20px;
-    padding: 0;
-    display: inline-block;
+  .menu {
+    display: inline;
+    position: relative;
+    max-width: 50%;
     float: right;
+    right: 5%;
+    top: 60px;
 
-    li {
-      display:inline-block;
-      margin-right: 10px;
-      width: 130px;
-      color: black;
-      padding:15px;
-      border: 2px solid black;
-
-      a {
-        text-decoration: none;
-        width: 100%;
-      }
-
-      a:hover {
-        color: white;
-      }
-      
-      a:focus {
-        color: white;
-        width: 100%;
-      }
+    a {
+    width: 130px;
+    border: 1px solid black;
+    padding: 10px;
+    display: inline-block;
     }
-      
-    li:hover {
-      background: #DCB3A5;
+
+    a:hover {
       border: 1px solid #DCB3A5;
       color: white;
+      background: #DCB3A5;
     }
   }
 }
@@ -104,6 +88,11 @@ header {
 /* =============================================================================
             Portfolio Body
    ========================================================================== */
+.aboutMe {
+  img {
+    width: 100%;
+  }
+}
 
 .home {
   blockquote {
@@ -118,25 +107,46 @@ header {
     float: right;
   }
 
-  .featuredPost {
-    width: 25%;
+  .portfolioPieces {
+    width: 100%;
+
+    .featuredPost {
+      margin-top: 100px;
+      width: 100%;
+      display: inline-block;
+      @include monoSp;
+      text-align: left;
+
+      .ft-img {
+        width: 59%;
+        float: left;
+        padding-right: 1%;
+        height: 100%;
+        overflow: hidden;
+        border-right: 1px solid black;
+        opacity: 0.5;
+        filter: grayscale(0,5);
+      }
+
+      .rightInfo {
+        height: 100%;
+        width: 40%;
+        // border-left: 1px solid black;
+      // border-top: 1px solid black;
+        float: left;
+        padding: 20px;
+      }
+
+      h2 {
+        text-decoration: underline;
+      }
+    }
+    
   }
+
 }  
 
-/* =============================================================================
-                   Sidebar
-   ========================================================================== */
-// .sidebar {
-//   width:30%;
-//   float:left;
-// }
-//   .sidebar ul {
-//     margin:0;
-//     padding:0;
-//   }
-//     .sidebar ul li {
-//       list-style: none;
-//     }
+
 
 /* =============================================================================
                    Footer
@@ -156,7 +166,8 @@ footer {
    ========================================================================== */
 
 .blog {
-  background: #FFFBDE;
+  // background: #FFFBDE;
+  // background-image: none;
   padding: 1px;
 
   .content {

@@ -27,10 +27,17 @@
         <img class="mainLogo" src="<?php bloginfo('template_directory'); ?>/img/lili_dev_logo.png" alt="Lisa Folkerson"></a>
             <?php // bloginfo( 'name' ); ?>         
 
-        <?php wp_nav_menu( array(
-          'container' => false,
-          'theme_locations' => 'primary'
-        )); ?>
+        <div class="menu"><?php 
+        $menuParameters = array(
+        'menu_location' => 'primary',
+          'container'       => false,
+          'echo'            => false,
+          'items_wrap'      => '%3$s',
+          'depth'           => 0,
+        );
+
+        echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' ); ?>
+        </div>
 
       </div> <!-- /.container -->
     </header> <!--/.header-->
