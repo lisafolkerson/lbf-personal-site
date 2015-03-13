@@ -24,6 +24,7 @@
 .b-top {
   height: 7px;
   width: 100%;
+  padding: 1px;
 }
 
 .b-bottom {
@@ -100,11 +101,17 @@ header {
     float: right;
     width: 65%;
     font-size: 1.4rem;
+    border: 2px solid black;
   }
 
   .wp-image-72 {
     width: 75%;
     float: right;
+    position: relative;
+    top: -200px;
+    left: -250px;
+    z-index: -10;
+    background: #DCB3A5;
   }
 
   .portfolioPieces {
@@ -116,36 +123,58 @@ header {
       display: inline-block;
       @include monoSp;
       text-align: left;
+      height: 100vh;
 
       .ft-img {
         width: 59%;
         float: left;
         padding-right: 1%;
-        height: 100%;
+        height: 75vh;
         overflow: hidden;
         border-right: 1px solid black;
-        opacity: 0.5;
-        filter: grayscale(0,5);
+        // opacity: 0.5;
+        -webkit-filter: grayscale(1);
+      }
+
+      .ft-img:hover {
+        -webkit-filter: grayscale(0);
       }
 
       .rightInfo {
         height: 100%;
         width: 40%;
-        // border-left: 1px solid black;
-      // border-top: 1px solid black;
         float: left;
         padding: 20px;
-      }
+        padding-top: 0;
+
+        .tags {
+
+          a {
+          padding: 10px;
+          border: 1px solid black;
+          margin-right: 20px;
+          margin-bottom: 10px;
+          display: inline-block;
+          }
+
+          a:hover {
+            color: black;
+          }
+        } //end tags
+
+        .linkToLive p {
+          @include monoSp;
+          font-size: 24px;
+          line-height: 0rem;
+        }
 
       h2 {
         text-decoration: underline;
+        }
       }
-    }
-    
-  }
-
+    } // end rightInfo
+  } // end portfolio pieces
 }  
-
 
 
 /* =============================================================================
@@ -166,12 +195,37 @@ footer {
    ========================================================================== */
 
 .blog {
-  // background: #FFFBDE;
-  // background-image: none;
   padding: 1px;
 
   .content {
     display: block;
     margin: 0 auto; 
+  }
+}
+
+.blog-entry {
+  margin-top: 100px;
+  width: 100%;
+  display: inline-block;
+  @include monoSp;
+  text-align: left;
+  height: 100vh;
+
+  article {
+    height: 100%;
+    width: 40%;
+    float: left;
+    padding: 20px;
+    padding-top: 0;
+  }
+
+  .blog-image {
+    width: 59%;
+    float: left;
+    padding-right: 1%;
+    height: 75vh;
+    overflow: hidden;
+    border-right: 1px solid black;
+    -webkit-filter: grayscale(1);
   }
 }

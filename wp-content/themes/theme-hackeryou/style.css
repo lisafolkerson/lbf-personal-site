@@ -358,8 +358,8 @@ body {
   background-repeat: no-repeat;
   background-position: 50%;
   background-attachment: fixed;
-  padding-top: 1px;
-  text-align: center; }
+  text-align: center;
+  z-index: -20; }
 
 .content {
   float: left;
@@ -427,7 +427,8 @@ pre {
 
 .b-top {
   height: 7px;
-  width: 100%; }
+  width: 100%;
+  padding: 1px; }
 
 .b-bottom {
   height: 7px;
@@ -485,10 +486,16 @@ header {
   text-align: left;
   float: right;
   width: 65%;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  border: 2px solid black; }
 .home .wp-image-72 {
   width: 75%;
-  float: right; }
+  float: right;
+  position: relative;
+  top: -200px;
+  left: -250px;
+  z-index: -10;
+  background: #DCB3A5; }
 .home .portfolioPieces {
   width: 100%; }
   .home .portfolioPieces .featuredPost {
@@ -496,21 +503,38 @@ header {
     width: 100%;
     display: inline-block;
     font-family: 'Inconsolata', courier, monospace;
-    text-align: left; }
+    text-align: left;
+    height: 100vh; }
     .home .portfolioPieces .featuredPost .ft-img {
       width: 59%;
       float: left;
       padding-right: 1%;
-      height: 100%;
+      height: 75vh;
       overflow: hidden;
-      border-right: 1px solid black; }
+      border-right: 1px solid black;
+      -webkit-filter: grayscale(1); }
+    .home .portfolioPieces .featuredPost .ft-img:hover {
+      -webkit-filter: grayscale(0); }
     .home .portfolioPieces .featuredPost .rightInfo {
       height: 100%;
       width: 40%;
       float: left;
-      padding: 20px; }
-    .home .portfolioPieces .featuredPost h2 {
-      text-decoration: underline; }
+      padding: 20px;
+      padding-top: 0; }
+      .home .portfolioPieces .featuredPost .rightInfo .tags a {
+        padding: 10px;
+        border: 1px solid black;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        display: inline-block; }
+      .home .portfolioPieces .featuredPost .rightInfo .tags a:hover {
+        color: black; }
+      .home .portfolioPieces .featuredPost .rightInfo .linkToLive p {
+        font-family: 'Inconsolata', courier, monospace;
+        font-size: 24px;
+        line-height: 0rem; }
+      .home .portfolioPieces .featuredPost .rightInfo h2 {
+        text-decoration: underline; }
 
 /* =============================================================================
                    Footer
@@ -528,3 +552,25 @@ footer {
   .blog .content {
     display: block;
     margin: 0 auto; }
+
+.blog-entry {
+  margin-top: 100px;
+  width: 100%;
+  display: inline-block;
+  font-family: 'Inconsolata', courier, monospace;
+  text-align: left;
+  height: 100vh; }
+  .blog-entry article {
+    height: 100%;
+    width: 40%;
+    float: left;
+    padding: 20px;
+    padding-top: 0; }
+  .blog-entry .blog-image {
+    width: 59%;
+    float: left;
+    padding-right: 1%;
+    height: 75vh;
+    overflow: hidden;
+    border-right: 1px solid black;
+    -webkit-filter: grayscale(1); }

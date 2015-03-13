@@ -15,29 +15,30 @@
 <?php // if there are posts, Start the Loop. ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
-		
-		<?php the_post_thumbnail('large'); ?>
-
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h2 class="entry-title">
-        <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
-          <?php the_title(); ?>
-        </a>
-      </h2>
-
+		<div class="blog-entry">
+			<div class="blog-image">
+				<?php the_post_thumbnail('custom-size'); ?>
+			</div><!-- end blog-image-->
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<h2 class="entry-title">
+	        <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
+	          <?php the_title(); ?>
+	        </a>
+	      </h2>
 			<section class="entry-content">
 				<?php the_content('Continue reading <span class="meta-nav">&rarr;</span>'); ?>
 				<?php wp_link_pages( array(
           'before' => '<div class="page-link"> Pages:',
           'after' => '</div>'
         )); ?>
+
 			</section><!-- .entry-content -->
 
 			<footer>
-				<p><?php the_tags('Tags: ', ', ', '<br>'); ?> Posted in <?php the_category(', '); ?></p>
-        <p><?php comments_popup_link('Respond to this post &raquo;', '1 Response &raquo;', '% Responses &raquo;'); ?></p>
+        <p><?php //comments_popup_link('Respond to this post &raquo;', '1 Response &raquo;', '% Responses &raquo;'); ?></p>
         <p><?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?></p>
 			</footer>
+		</div><!--end .blog-entry-->
 
 		</article><!-- #post-## -->
 

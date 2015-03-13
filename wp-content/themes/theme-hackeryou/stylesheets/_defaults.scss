@@ -21,8 +21,8 @@ body {
   background-repeat: no-repeat;
   background-position: 50%;
   background-attachment: fixed;
-  padding-top: 1px;
   text-align: center;
+  z-index: -20;
 }
 
 .content {

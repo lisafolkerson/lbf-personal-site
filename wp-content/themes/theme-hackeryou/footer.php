@@ -1,6 +1,5 @@
 <footer>
-  <div class="container">
-  		
+  <div class="container">	
     <p>&copy; Lisa Folkerson <?php echo date('Y'); ?></p>
   </div>
 </footer>
