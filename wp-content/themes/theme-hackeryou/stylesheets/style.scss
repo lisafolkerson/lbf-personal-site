@@ -104,16 +104,6 @@ header {
     border: 2px solid black;
   }
 
-  .wp-image-72 {
-    width: 75%;
-    float: right;
-    position: relative;
-    top: -200px;
-    left: -250px;
-    z-index: -10;
-    background: #DCB3A5;
-  }
-
   .portfolioPieces {
     width: 100%;
 
@@ -176,17 +166,60 @@ header {
   } // end portfolio pieces
 }  
 
-
 /* =============================================================================
-                   Footer
+                Contact Form Styles
    ========================================================================== */
+#contact {
+    padding-top: 300px;
+    @include monoSp;
+    text-transform: uppercase;
 
-footer {
-  clear:both;
+    h3 {
+      transform: rotate(-12deg);
+      text-align: left;
+      font-size: 30px;
+      position: relative;
+      top: 400px;
+      left: 100px;
+    }
+}
+
+.wpcf7-form {
+  float: left;
+  text-align: left;
+  
 
   p {
-    margin-bottom: 0px;
+      @include monoSp;
   }
+
+  .wpcf7-form-control {
+    outline: 1px solid black;
+    padding: 10px;
+    background: none;
+  }
+}
+
+.your-subject {
+  display: none;
+}
+
+.wpcf7-submit {
+  float: left;
+  width: 130px;
+  text-transform: uppercase;
+}
+
+.wp-image-72 {
+  width: 75%;
+  float: right;
+  position: relative;
+  top: -650px;
+  // left: -250px;
+  z-index: -5;
+  opacity: 0.5;
+  background: #DCB3A5;
+
 }
 
 
@@ -228,5 +261,17 @@ footer {
     overflow: hidden;
     border-right: 1px solid black;
     -webkit-filter: grayscale(1);
+  }
+}
+
+/* =============================================================================
+                Footer Styles
+   ========================================================================== */
+
+footer {
+  clear:both;
+
+  p {
+    margin-bottom: 0px;
   }
 }

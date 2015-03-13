@@ -488,14 +488,6 @@ header {
   width: 65%;
   font-size: 1.4rem;
   border: 2px solid black; }
-.home .wp-image-72 {
-  width: 75%;
-  float: right;
-  position: relative;
-  top: -200px;
-  left: -250px;
-  z-index: -10;
-  background: #DCB3A5; }
 .home .portfolioPieces {
   width: 100%; }
   .home .portfolioPieces .featuredPost {
@@ -537,12 +529,46 @@ header {
         text-decoration: underline; }
 
 /* =============================================================================
-                   Footer
+                Contact Form Styles
    ========================================================================== */
-footer {
-  clear: both; }
-  footer p {
-    margin-bottom: 0px; }
+#contact {
+  padding-top: 300px;
+  font-family: 'Inconsolata', courier, monospace;
+  text-transform: uppercase; }
+  #contact h3 {
+    transform: rotate(-12deg);
+    text-align: left;
+    font-size: 30px;
+    position: relative;
+    top: 400px;
+    left: 100px; }
+
+.wpcf7-form {
+  float: left;
+  text-align: left; }
+  .wpcf7-form p {
+    font-family: 'Inconsolata', courier, monospace; }
+  .wpcf7-form .wpcf7-form-control {
+    outline: 1px solid black;
+    padding: 10px;
+    background: none; }
+
+.your-subject {
+  display: none; }
+
+.wpcf7-submit {
+  float: left;
+  width: 130px;
+  text-transform: uppercase; }
+
+.wp-image-72 {
+  width: 75%;
+  float: right;
+  position: relative;
+  top: -650px;
+  z-index: -5;
+  opacity: 0.5;
+  background: #DCB3A5; }
 
 /* =============================================================================
                 Blog Styles
@@ -575,3 +601,11 @@ footer {
     overflow: hidden;
     border-right: 1px solid black;
     -webkit-filter: grayscale(1); }
+
+/* =============================================================================
+                Footer Styles
+   ========================================================================== */
+footer {
+  clear: both; }
+  footer p {
+    margin-bottom: 0px; }
