@@ -565,7 +565,8 @@ footer {
     width: 40%;
     float: left;
     padding: 20px;
-    padding-top: 0; }
+    padding-top: 0;
+    overflow: hidden; }
   .blog-entry .blog-image {
     width: 59%;
     float: left;

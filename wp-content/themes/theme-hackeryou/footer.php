@@ -1,9 +1,26 @@
 <footer>
   <div class="container">	
-    <p>&copy; Lisa Folkerson <?php echo date('Y'); ?></p>
-  </div>
-</footer>
+	<?php 
+	$image = get_field('footer', 'options');
+	if( !empty($image) ): ?>
 
+		<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+	<?php endif; ?>
+
+	<?php if( have_rows('links', 'options') ) : ?>
+		<ul>
+			<?php while( have_rows('links', 'options') ) : the_row(); ?>
+				<a href="<?php the_sub_field('fa_link', 'options'); ?>"><?php the_sub_field('fa_icon', 'options'); ?></a>
+			<?php endwhile; ?>
+		</ul>
+	<?php endif; ?> 
+
+	<?php the_field('mailing_list', 'options'); ?>
+
+    <p>&copy; Lisa Folkerson <?php echo date('Y'); ?></p>
+  </div><!--end container-footer-->
+</footer>
 
 <!-- Google Analytics! -->
 <script>

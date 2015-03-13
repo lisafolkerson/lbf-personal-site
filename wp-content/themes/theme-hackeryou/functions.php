@@ -273,3 +273,35 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
+function custom_excerpt_length( $length ) {
+	return 75;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function new_excerpt_more( $more ) {
+	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'theme-hackeryou') . '</a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+/*
+*  Create a simple sub options page called 'Footer'
+*/
+
+if( function_exists('acf_add_options_sub_page') )
+{
+    acf_add_options_sub_page( 'Footer' );
+}
+
+/*
+*  Create an advanced sub page called 'Footer' that sits under the General options menu
+*/
+
+if( function_exists('acf_add_options_sub_page') )
+{
+    acf_add_options_sub_page(array(
+        'title' => 'Footer',
+        'parent' => 'options-general.php',
+        'capability' => 'manage_options'
+    ));
+}

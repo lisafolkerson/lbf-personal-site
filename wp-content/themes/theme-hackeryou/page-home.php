@@ -44,13 +44,10 @@ get_header();  ?>
    
    </div> <!-- end .portfolioPieces-->
    <section id="contact">
-     <?php query_posts( 'p=120' ); ?> 
-     <?php while (have_posts()) : the_post(); ?>
-        <?php the_content(); ?>
-        <?php endwhile;?>
+        <?php the_field('content'); ?>
    </section>
    
-       <?php endwhile; // end the loop?> <!-- /.container -->
+       <?php endwhile; // end the loop?><!-- /.container -->
 </div> <!-- /.main -->
 
 <?php get_footer(); ?>
