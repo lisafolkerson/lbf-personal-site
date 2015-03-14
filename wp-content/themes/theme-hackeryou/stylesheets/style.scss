@@ -179,9 +179,14 @@ header {
       text-align: left;
       font-size: 30px;
       position: relative;
-      top: 400px;
       left: 100px;
+      display: inline-block;
     }
+}
+
+#contact:nth-child(3) {
+  left: -100px;
+  top: 460px;
 }
 
 .wpcf7-form {
@@ -271,7 +276,42 @@ header {
 footer {
   clear:both;
 
-  p {
-    margin-bottom: 0px;
+  .container-footer {
+    display: inline-block;
+  
+    .footer-logo {
+      width: 26%;
+      display: inline-block;
+      float: left;
+    }
+
+    .bottom-nav {
+      display: inline-block;
+      float: left;
+      text-align: left;
+
+      ul {
+        padding-left: 0px; 
+        font-size: 35px;
+        padding: 15px;
+        float: right;
+        position: relative;
+        left: 100%;
+
+        a {
+          padding: 15px;
+        }
+        
+      }
+    }
+
+
+    p {
+      margin-bottom: 0px;
+    }
+  }
+
+  .mailList {
+    display: inline-block;
   }
 }

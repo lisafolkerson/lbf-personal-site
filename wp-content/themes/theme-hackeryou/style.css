@@ -347,7 +347,8 @@ body {
   padding: 1px; }
 
 .main {
-  margin: 0 10%; }
+  margin: 10%;
+  margin-bottom: 1%; }
 
 .container {
   max-width: 1200px;
@@ -540,8 +541,12 @@ header {
     text-align: left;
     font-size: 30px;
     position: relative;
-    top: 400px;
-    left: 100px; }
+    left: 100px;
+    display: inline-block; }
+
+#contact:nth-child(3) {
+  left: -100px;
+  top: 460px; }
 
 .wpcf7-form {
   float: left;
@@ -607,5 +612,26 @@ header {
    ========================================================================== */
 footer {
   clear: both; }
-  footer p {
-    margin-bottom: 0px; }
+  footer .container-footer {
+    display: inline-block; }
+    footer .container-footer .footer-logo {
+      width: 26%;
+      display: inline-block;
+      float: left; }
+    footer .container-footer .bottom-nav {
+      display: inline-block;
+      float: left;
+      text-align: left; }
+      footer .container-footer .bottom-nav ul {
+        padding-left: 0px;
+        font-size: 35px;
+        padding: 15px;
+        float: right;
+        position: relative;
+        left: 100%; }
+        footer .container-footer .bottom-nav ul a {
+          padding: 15px; }
+    footer .container-footer p {
+      margin-bottom: 0px; }
+  footer .mailList {
+    display: inline-block; }
