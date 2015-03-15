@@ -1,5 +1,3 @@
-//load in jQuery plugin dependencies (eg. flexslider, smoothScroll etc.) in this file
-
 /**
  * SmoothScroll
  * This helper script created by DWUser.com.  Copyright 2012 DWUser.com.  

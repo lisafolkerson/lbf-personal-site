@@ -1,3 +1,2 @@
-$(function(){
 	//your jQuery here
 });

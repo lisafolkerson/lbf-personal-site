@@ -30,7 +30,7 @@
         <img class="mainLogo" src="<?php bloginfo('template_directory'); ?>/img/lili_dev_logo.png" alt="Lisa Folkerson"></a>
             <?php // bloginfo( 'name' ); ?>         
 
-        <div class="menu"><?php 
+        <div class="menu smoothScroll"><?php 
         $menuParameters = array(
         'menu_location' => 'primary',
           'container'       => false,

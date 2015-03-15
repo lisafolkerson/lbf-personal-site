@@ -43,7 +43,7 @@ get_header();  ?>
      <?php wp_reset_postdata(); //return env back to regular functionality?>
    
    </div> <!-- end .portfolioPieces-->
-   <section id="contact">
+   <section id="contact" class="smoothScroll">
         <?php the_field('content'); ?>
    </section>
    
