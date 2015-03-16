@@ -97,28 +97,145 @@
 }
 
 /* ========================================
-            3 2 0  P I X E L S 
+            4 8 0  P I X E L S 
 =============================== */
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
+
+@-webkit-keyframes name {
+  0%   { top: -171px; left: 45%; }
+  100% { top: 0px; left: 0; }
+}
+@keyframes name {
+    0%   { top: -171px; left: 45%px; }
+    100% { top: 0px; left: 0; }
+  }
+
+@-webkit-keyframes title {
+  0%   { top: 171px; left: -95%; }
+  100% { top: -80px; left: 0; }
+}
+@keyframes title {
+    0%   { top: 171px; left: -95%; }
+    100% { top: -80px; left: 0; }
+  }	
 
 	header {
-		background: orange;
-
-		img.mainLogo {
-			background: yellow;
-			max-width: 136%;
-			}	
+		.logo1 {
+		  -webkit-animation: name 1s linear;
+		  animation: name 1s linear;
+		  top: 0;
+		  left: 0;
 		}
 
-	blockquote {
-		width: 100%;
-	}
-	
-	.ft-img {
-		height: 35vh;
-	}
+		.logo2 {
+		  -webkit-animation: title 1s linear;
+		  animation: title 1s linear;
+		  top: -80px;
+		  left: 0;
 
+		}
+		img.mainLogo {
+			max-width: 100%;
+			}	
+		
+		.container {
+			position: relative;	
+
+			.menu {
+				position: absolute;
+				top: 24vh;
+				width: 100%;
+				padding: 40px 10px 0px 20px;
+			    left: 0;
+
+				a {
+					padding: 2%;
+				}
+
+
+				a:first-child {
+					width: 30%;
+					display: inline-block;
+					margin: 0 auto;
+					position: relative;
+					right: 0;
+					margin-left: 1.5%;
+				}
+
+				a:nth-child(2n) {
+					width: 30%;
+					margin: 0 auto;
+					display: inline-block;
+					position: relative;
+					right: 0;
+					margin-left: 1.5%;
+					}
+
+				a:nth-child(3) {
+					width: 30%;
+					margin: 0 auto;
+					display: inline-block;
+					position: relative;
+					left: 0;
+						
+				} 
+			}
+		} // end container
+	}// end header
+
+	.home {
+		blockquote {
+			width: 100%;
+
+		}
+	
+		.portfolioPieces {
+
+			.featuredPost{
+
+				.ft-img {
+					height: inherit;
+					
+						img {
+							margin-bottom: 10px;
+						}
+					}
+
+				.rightInfo {
+					p {
+						display: none;
+						font-size: 0.75rem;
+					}
+					p.tags, .linkToLive p{
+						display: inherit;
+					}
+
+					.linkToLive p {
+						text-align: left;
+						font-size: 1.2rem;
+					}
+				} // end rightInfo	
+			} // end featuredPost
+		} // end PortfolioPieces
+		
+		.wpcf7-form {
+	
+		input {
+			width: 100%;
+		}
+	} // end wpcf7-form
+	} //  end home
+
+	footer {
+
+		.container-footer {
+
+			img.footer-logo {
+				display: none;
+			}
+		}
+	}
 
 
 } // end 320 px media query

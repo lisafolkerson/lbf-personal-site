@@ -8,6 +8,9 @@ get_header();  ?>
 
 <div class="main clearfix">
   <div class="aboutMe clearfix">
+    <a href="#portfolio smoothScroll"><p class="downArrow smoothScroll">&#10553;</p></a>
+    
+
      <?php // Start the loop ?>
      <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
    

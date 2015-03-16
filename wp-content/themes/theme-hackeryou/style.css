@@ -27,13 +27,57 @@
   width: 7px;
   right: 0; }
 
+@-webkit-keyframes name {
+  0% {
+    top: -171px;
+    left: 45%; }
+
+  100% {
+    top: 0px;
+    left: 0; } }
+
+@keyframes name {
+  0% {
+    top: -171px;
+    left: 45% px; }
+
+  100% {
+    top: 0px;
+    left: 0; } }
+
+@-webkit-keyframes title {
+  0% {
+    top: 171px;
+    left: -95%; }
+
+  100% {
+    top: 70px;
+    left: -45%; } }
+
+@keyframes title {
+  0% {
+    top: 171px;
+    left: -95%; }
+
+  100% {
+    top: 70px;
+    left: -45%; } }
+
 header {
   font-family: 'Inconsolata', courier, monospace; }
+  header .logo1 {
+    -webkit-animation: name 2s linear;
+    animation: name 2s linear;
+    top: 0;
+    left: 0; }
+  header .logo2 {
+    -webkit-animation: title 2s linear;
+    animation: title 2s linear;
+    top: 70px;
+    left: -45%; }
   header .mainLogo {
     max-width: 42%;
-    position: relative;
-    left: -100px;
-    top: -5px; }
+    position: relative; }
   header .menu {
     display: inline;
     position: relative;
@@ -67,9 +111,11 @@ header {
 .home blockquote {
   text-align: left;
   float: right;
-  width: 65%;
+  width: 80%;
   font-size: 1.4rem;
-  border: 2px solid black; }
+  border: 2px solid black;
+  padding: 35px;
+  font-weight: 300; }
 .home .portfolioPieces {
   width: 100%; }
   .home .portfolioPieces .featuredPost {
@@ -162,6 +208,9 @@ header {
 /* =============================================================================
                 Blog Styles
    ========================================================================== */
+.single .menu a {
+  text-align: center; }
+
 .blog {
   padding: 1px; }
   .blog .content {
@@ -173,9 +222,9 @@ header {
   width: 100%;
   display: inline-block;
   font-family: 'Inconsolata', courier, monospace;
-  text-align: left;
   height: 100vh; }
   .blog-entry article {
+    text-align: left;
     height: 100%;
     width: 40%;
     float: left;
@@ -190,6 +239,8 @@ header {
     overflow: hidden;
     border-right: 1px solid black;
     -webkit-filter: grayscale(1); }
+  .blog-entry .blog-image:hover {
+    -webkit-filter: grayscale(0); }
 
 .single .container-with-background {
   text-align: left; }
@@ -604,7 +655,7 @@ a:hover {
 /* paragraphs */
 p {
   line-height: 1.5;
-  font-family: 'Chivo', sans-serif; }
+  font-family: 'Lato', sans-serif; }
 
 /*blockquotes*/
 blockquote {
@@ -702,15 +753,102 @@ pre {
     width: 42%; } }
 
 /* ========================================
-            3 2 0  P I X E L S 
+            4 8 0  P I X E L S 
 =============================== */
-@media (max-width: 320px) {
-  header {
-    background: orange; }
-    header img.mainLogo {
-      background: yellow;
-      max-width: 136%; }
-  blockquote {
+@media (max-width: 480px) {
+  @-webkit-keyframes name {
+    0% {
+      top: -171px;
+      left: 45%; }
+
+    100% {
+      top: 0px;
+      left: 0; } }
+
+  @keyframes name {
+    0% {
+      top: -171px;
+      left: 45% px; }
+
+    100% {
+      top: 0px;
+      left: 0; } }
+
+  @-webkit-keyframes title {
+    0% {
+      top: 171px;
+      left: -95%; }
+
+    100% {
+      top: -80px;
+      left: 0; } }
+
+  @keyframes title {
+    0% {
+      top: 171px;
+      left: -95%; }
+
+    100% {
+      top: -80px;
+      left: 0; } }
+
+  header .logo1 {
+    -webkit-animation: name 1s linear;
+    animation: name 1s linear;
+    top: 0;
+    left: 0; }
+  header .logo2 {
+    -webkit-animation: title 1s linear;
+    animation: title 1s linear;
+    top: -80px;
+    left: 0; }
+  header img.mainLogo {
+    max-width: 100%; }
+  header .container {
+    position: relative; }
+    header .container .menu {
+      position: absolute;
+      top: 24vh;
+      width: 100%;
+      padding: 40px 10px 0px 20px;
+      left: 0; }
+      header .container .menu a {
+        padding: 2%; }
+      header .container .menu a:first-child {
+        width: 30%;
+        display: inline-block;
+        margin: 0 auto;
+        position: relative;
+        right: 0;
+        margin-left: 1.5%; }
+      header .container .menu a:nth-child(2n) {
+        width: 30%;
+        margin: 0 auto;
+        display: inline-block;
+        position: relative;
+        right: 0;
+        margin-left: 1.5%; }
+      header .container .menu a:nth-child(3) {
+        width: 30%;
+        margin: 0 auto;
+        display: inline-block;
+        position: relative;
+        left: 0; }
+  .home blockquote {
     width: 100%; }
-  .ft-img {
-    height: 35vh; } }
+  .home .portfolioPieces .featuredPost .ft-img {
+    height: inherit; }
+    .home .portfolioPieces .featuredPost .ft-img img {
+      margin-bottom: 10px; }
+  .home .portfolioPieces .featuredPost .rightInfo p {
+    display: none;
+    font-size: 0.75rem; }
+  .home .portfolioPieces .featuredPost .rightInfo p.tags, .home .portfolioPieces .featuredPost .rightInfo .linkToLive p {
+    display: inherit; }
+  .home .portfolioPieces .featuredPost .rightInfo .linkToLive p {
+    text-align: left;
+    font-size: 1.2rem; }
+  .home .wpcf7-form input {
+    width: 100%; }
+  footer .container-footer img.footer-logo {
+    display: none; } }
