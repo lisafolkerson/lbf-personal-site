@@ -43,8 +43,11 @@ get_header();  ?>
      <?php wp_reset_postdata(); //return env back to regular functionality?>
    
    </div> <!-- end .portfolioPieces-->
-   <section id="contact" class="smoothScroll">
-        <?php the_field('content'); ?>
+   <section class="contactForm" id="contact">
+     <div class="offset-img">
+        <?php get_the_post_thumbnail('medium'); ?>
+      </div> <!-- end offset-img-->
+      <?php the_field('content'); ?>
    </section>
    
        <?php endwhile; // end the loop?><!-- /.container -->

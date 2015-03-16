@@ -4,7 +4,7 @@
 	$image = get_field('footer', 'options');
 	if( !empty($image) ): ?>
 
-		<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="footer-logo" />
+		<a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="footer-logo" /></a>
 
 	<?php endif; ?>
 

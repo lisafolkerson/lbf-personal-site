@@ -1,0 +1,109 @@
+/* =============================================================================
+                Media Queries
+   ========================================================================== */
+footer {
+	// background: yellow;
+}
+
+
+/* ===========================================
+            9 0 0  P I X E L S 
+=============================== */
+
+@media (max-width: 900px) {
+  header {
+  	a {
+  		width: 15%;
+  	}
+  	.menu {
+  		max-width: 100%;
+  	}
+}
+  .contactForm {	
+	a {
+	  font-size: 20px;
+	  left: 40px;
+	}
+  }
+} // end #contact
+
+/* ===========================================
+            7 5 0  P I X E L S 
+=============================== */
+
+@media (max-width: 750px) {
+	header {	
+		.mainLogo {
+			width: 100%;
+		}
+
+		.menu {
+			display: block;
+			width: 130px;
+			text-align: center;
+
+			a {
+				width: 100%;
+				border: 1px solid black;
+				margin: 10px;
+				display: inline-block;
+			}
+		}
+	}
+
+	.home {
+		blockquote {
+			font-size: 1rem;
+			float: left;
+		}		
+
+		.portfolioPieces .featuredPost {
+			height: inherit;
+
+			.rightInfo {
+				width: 100%;
+			}
+
+			.ft-img {
+				width: 100%;
+				border-right: none;
+				border-bottom: 1px solid black;
+				height: 50vh;
+				}
+			}
+		}
+
+	.contactForm {
+		width: 100%;
+
+		h3 {
+			display: inline-block; 
+			width: 33%;		
+			left: -25px;
+		}
+	}
+
+	.bottom-nav {
+		float: right;
+		text-align: right;
+		}
+
+	footer .container-footer .bottom-nav ul {
+		float: left;
+		margin-right: -40px;
+		position: static;
+		left: 0;
+	}
+	.footer-logo {
+	  float: left;
+	  width: 42%;
+	}
+}
+
+/* ===========================================
+            3 2 0  P I X E L S 
+=============================== */
+
+@media (max-width: 320px) {
+
+} // end 320 px media query

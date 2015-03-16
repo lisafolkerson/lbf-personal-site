@@ -1,3 +1,227 @@
+/* =============================================================================
+                   Header
+   ========================================================================== */
+.border {
+  position: fixed;
+  background: #DCB3A5;
+  z-index: 10;
+  margin: 0; }
+
+.b-top {
+  height: 7px;
+  width: 100%;
+  padding: 1px; }
+
+.b-bottom {
+  height: 7px;
+  width: 100%;
+  bottom: 0; }
+
+.b-left {
+  height: 100vh;
+  width: 7px;
+  left: 0; }
+
+.b-right {
+  height: 100vh;
+  width: 7px;
+  right: 0; }
+
+header {
+  font-family: 'Inconsolata', courier, monospace; }
+  header .mainLogo {
+    max-width: 42%;
+    position: relative;
+    left: -100px;
+    top: -5px; }
+  header .menu {
+    display: inline;
+    position: relative;
+    max-width: 50%;
+    float: right;
+    right: 5%;
+    top: 60px; }
+    header .menu a {
+      width: 130px;
+      border: 1px solid black;
+      padding: 10px;
+      display: inline-block; }
+    header .menu a:hover {
+      border: 1px solid #DCB3A5;
+      color: white;
+      background: #DCB3A5; }
+
+.menu:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
+/* =============================================================================
+            Portfolio Body
+   ========================================================================== */
+.aboutMe img {
+  width: 100%; }
+
+.home blockquote {
+  text-align: left;
+  float: right;
+  width: 65%;
+  font-size: 1.4rem;
+  border: 2px solid black; }
+.home .portfolioPieces {
+  width: 100%; }
+  .home .portfolioPieces .featuredPost {
+    margin-top: 100px;
+    width: 100%;
+    display: inline-block;
+    font-family: 'Inconsolata', courier, monospace;
+    text-align: left;
+    height: 100vh; }
+    .home .portfolioPieces .featuredPost .ft-img {
+      width: 59%;
+      float: left;
+      padding-right: 1%;
+      height: 75vh;
+      overflow: hidden;
+      border-right: 1px solid black;
+      -webkit-filter: grayscale(1); }
+    .home .portfolioPieces .featuredPost .ft-img:hover {
+      -webkit-filter: grayscale(0); }
+    .home .portfolioPieces .featuredPost .rightInfo {
+      height: 100%;
+      width: 40%;
+      float: left;
+      padding: 20px;
+      padding-top: 0; }
+      .home .portfolioPieces .featuredPost .rightInfo .tags a {
+        padding: 10px;
+        border: 1px solid black;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        display: inline-block; }
+      .home .portfolioPieces .featuredPost .rightInfo .tags a:hover {
+        color: black; }
+      .home .portfolioPieces .featuredPost .rightInfo .linkToLive p {
+        font-family: 'Inconsolata', courier, monospace;
+        font-size: 24px;
+        line-height: 0rem; }
+      .home .portfolioPieces .featuredPost .rightInfo h2 {
+        text-decoration: underline; }
+
+/* =============================================================================
+                Contact Form Styles
+   ========================================================================== */
+.contactForm {
+  font-family: 'Inconsolata', courier, monospace;
+  text-transform: uppercase; }
+  .contactForm h3 {
+    transform: rotate(-12deg);
+    text-align: left;
+    font-size: 30px;
+    position: relative;
+    left: 100px;
+    display: inline-block; }
+
+.wpcf7 {
+  position: relative; }
+
+#contact:nth-child(3) {
+  left: -100px;
+  top: 460px; }
+
+.wpcf7-form {
+  float: left;
+  text-align: left; }
+  .wpcf7-form p {
+    font-family: 'Inconsolata', courier, monospace; }
+  .wpcf7-form .wpcf7-form-control {
+    outline: 1px solid black;
+    padding: 10px;
+    background: none; }
+
+.your-subject {
+  display: none; }
+
+.wpcf7-submit {
+  float: left;
+  width: 130px;
+  text-transform: uppercase; }
+
+.wp-image-72 {
+  width: 75%;
+  float: right;
+  position: relative;
+  overflow: hidden;
+  top: -100px;
+  z-index: -5;
+  opacity: 0.5;
+  background: #DCB3A5; }
+
+/* =============================================================================
+                Blog Styles
+   ========================================================================== */
+.blog {
+  padding: 1px; }
+  .blog .content {
+    display: block;
+    margin: 0 auto; }
+
+.blog-entry {
+  margin-top: 100px;
+  width: 100%;
+  display: inline-block;
+  font-family: 'Inconsolata', courier, monospace;
+  text-align: left;
+  height: 100vh; }
+  .blog-entry article {
+    height: 100%;
+    width: 40%;
+    float: left;
+    padding: 20px;
+    padding-top: 0;
+    overflow: hidden; }
+  .blog-entry .blog-image {
+    width: 59%;
+    float: left;
+    padding-right: 1%;
+    height: 75vh;
+    overflow: hidden;
+    border-right: 1px solid black;
+    -webkit-filter: grayscale(1); }
+
+.single .container-with-background {
+  text-align: left; }
+
+/* =============================================================================
+                Footer Styles
+   ========================================================================== */
+footer {
+  clear: both; }
+  footer .container-footer {
+    display: inline-block; }
+    footer .container-footer .footer-logo {
+      width: 26%;
+      display: inline-block; }
+    footer .container-footer .bottom-nav {
+      display: inline-block;
+      float: left;
+      text-align: left; }
+      footer .container-footer .bottom-nav ul {
+        padding-left: 0px;
+        font-size: 35px;
+        padding: 15px;
+        float: right;
+        position: relative;
+        left: 100%; }
+        footer .container-footer .bottom-nav ul a {
+          padding: 15px; }
+    footer .container-footer p {
+      margin-bottom: 0px; }
+  footer .mailList {
+    display: inline-block; }
+
 /*
 Theme Name: HackerYou Starter Theme
 Theme URI: http://hackeryou.com;
@@ -418,220 +642,65 @@ pre {
   border: 1px solid #ccc; }
 
 /* =============================================================================
-                   Header
+                Media Queries
    ========================================================================== */
-.border {
-  position: fixed;
-  background: #DCB3A5;
-  z-index: 10;
-  margin: 0; }
-
-.b-top {
-  height: 7px;
-  width: 100%;
-  padding: 1px; }
-
-.b-bottom {
-  height: 7px;
-  width: 100%;
-  bottom: 0; }
-
-.b-left {
-  height: 100vh;
-  width: 7px;
-  left: 0; }
-
-.b-right {
-  height: 100vh;
-  width: 7px;
-  right: 0; }
-
-header {
-  font-family: 'Inconsolata', courier, monospace; }
-  header .mainLogo {
-    max-width: 42%;
-    position: relative;
-    left: -100px;
-    top: -5px; }
+/* ===========================================
+            9 0 0  P I X E L S 
+=============================== */
+@media (max-width: 900px) {
+  header a {
+    width: 15%; }
   header .menu {
-    display: inline;
-    position: relative;
-    max-width: 50%;
-    float: right;
-    right: 5%;
-    top: 60px; }
-    header .menu a {
-      width: 130px;
-      border: 1px solid black;
-      padding: 10px;
-      display: inline-block; }
-    header .menu a:hover {
-      border: 1px solid #DCB3A5;
-      color: white;
-      background: #DCB3A5; }
+    max-width: 100%; }
+  .contactForm a {
+    font-size: 20px;
+    left: 40px; } }
 
-.menu:after {
-  content: " ";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both; }
-
-/* =============================================================================
-            Portfolio Body
-   ========================================================================== */
-.aboutMe img {
-  width: 100%; }
-
-.home blockquote {
-  text-align: left;
-  float: right;
-  width: 65%;
-  font-size: 1.4rem;
-  border: 2px solid black; }
-.home .portfolioPieces {
-  width: 100%; }
-  .home .portfolioPieces .featuredPost {
-    margin-top: 100px;
-    width: 100%;
-    display: inline-block;
-    font-family: 'Inconsolata', courier, monospace;
-    text-align: left;
-    height: 100vh; }
-    .home .portfolioPieces .featuredPost .ft-img {
-      width: 59%;
-      float: left;
-      padding-right: 1%;
-      height: 75vh;
-      overflow: hidden;
-      border-right: 1px solid black;
-      -webkit-filter: grayscale(1); }
-    .home .portfolioPieces .featuredPost .ft-img:hover {
-      -webkit-filter: grayscale(0); }
-    .home .portfolioPieces .featuredPost .rightInfo {
-      height: 100%;
-      width: 40%;
-      float: left;
-      padding: 20px;
-      padding-top: 0; }
-      .home .portfolioPieces .featuredPost .rightInfo .tags a {
-        padding: 10px;
-        border: 1px solid black;
-        margin-right: 20px;
-        margin-bottom: 10px;
-        display: inline-block; }
-      .home .portfolioPieces .featuredPost .rightInfo .tags a:hover {
-        color: black; }
-      .home .portfolioPieces .featuredPost .rightInfo .linkToLive p {
-        font-family: 'Inconsolata', courier, monospace;
-        font-size: 24px;
-        line-height: 0rem; }
-      .home .portfolioPieces .featuredPost .rightInfo h2 {
-        text-decoration: underline; }
-
-/* =============================================================================
-                Contact Form Styles
-   ========================================================================== */
-#contact {
-  padding-top: 300px;
-  font-family: 'Inconsolata', courier, monospace;
-  text-transform: uppercase; }
-  #contact h3 {
-    transform: rotate(-12deg);
-    text-align: left;
-    font-size: 30px;
-    position: relative;
-    left: 100px;
-    display: inline-block; }
-
-#contact:nth-child(3) {
-  left: -100px;
-  top: 460px; }
-
-.wpcf7-form {
-  float: left;
-  text-align: left; }
-  .wpcf7-form p {
-    font-family: 'Inconsolata', courier, monospace; }
-  .wpcf7-form .wpcf7-form-control {
-    outline: 1px solid black;
-    padding: 10px;
-    background: none; }
-
-.your-subject {
-  display: none; }
-
-.wpcf7-submit {
-  float: left;
-  width: 130px;
-  text-transform: uppercase; }
-
-.wp-image-72 {
-  width: 75%;
-  float: right;
-  position: relative;
-  top: -650px;
-  z-index: -5;
-  opacity: 0.5;
-  background: #DCB3A5; }
-
-/* =============================================================================
-                Blog Styles
-   ========================================================================== */
-.blog {
-  padding: 1px; }
-  .blog .content {
+/* ===========================================
+            7 5 0  P I X E L S 
+=============================== */
+@media (max-width: 750px) {
+  header .mainLogo {
+    width: 100%; }
+  header .menu {
     display: block;
-    margin: 0 auto; }
-
-.blog-entry {
-  margin-top: 100px;
-  width: 100%;
-  display: inline-block;
-  font-family: 'Inconsolata', courier, monospace;
-  text-align: left;
-  height: 100vh; }
-  .blog-entry article {
-    height: 100%;
-    width: 40%;
-    float: left;
-    padding: 20px;
-    padding-top: 0;
-    overflow: hidden; }
-  .blog-entry .blog-image {
-    width: 59%;
-    float: left;
-    padding-right: 1%;
-    height: 75vh;
-    overflow: hidden;
-    border-right: 1px solid black;
-    -webkit-filter: grayscale(1); }
-
-/* =============================================================================
-                Footer Styles
-   ========================================================================== */
-footer {
-  clear: both; }
-  footer .container-footer {
-    display: inline-block; }
-    footer .container-footer .footer-logo {
-      width: 26%;
+    width: 130px;
+    text-align: center; }
+    header .menu a {
+      width: 100%;
+      border: 1px solid black;
+      margin: 10px;
+      display: inline-block; }
+  .home blockquote {
+    font-size: 1rem;
+    float: left; }
+  .home .portfolioPieces .featuredPost {
+    height: inherit; }
+    .home .portfolioPieces .featuredPost .rightInfo {
+      width: 100%; }
+    .home .portfolioPieces .featuredPost .ft-img {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid black;
+      height: 50vh; }
+  .contactForm {
+    width: 100%; }
+    .contactForm h3 {
       display: inline-block;
-      float: left; }
-    footer .container-footer .bottom-nav {
-      display: inline-block;
-      float: left;
-      text-align: left; }
-      footer .container-footer .bottom-nav ul {
-        padding-left: 0px;
-        font-size: 35px;
-        padding: 15px;
-        float: right;
-        position: relative;
-        left: 100%; }
-        footer .container-footer .bottom-nav ul a {
-          padding: 15px; }
-    footer .container-footer p {
-      margin-bottom: 0px; }
-  footer .mailList {
-    display: inline-block; }
+      width: 33%;
+      left: -25px; }
+  .bottom-nav {
+    float: right;
+    text-align: right; }
+  footer .container-footer .bottom-nav ul {
+    float: left;
+    margin-right: -40px;
+    position: static;
+    left: 0; }
+  .footer-logo {
+    float: left;
+    width: 42%; } }
+
+/* ===========================================
+            3 2 0  P I X E L S 
+=============================== */
