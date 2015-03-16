@@ -701,6 +701,16 @@ pre {
     float: left;
     width: 42%; } }
 
-/* ===========================================
+/* ========================================
             3 2 0  P I X E L S 
 =============================== */
+@media (max-width: 320px) {
+  header {
+    background: orange; }
+    header img.mainLogo {
+      background: yellow;
+      max-width: 136%; }
+  blockquote {
+    width: 100%; }
+  .ft-img {
+    height: 35vh; } }
