@@ -1,3 +1,5 @@
+@import "animate";
+
 @mixin monoSp {
   font-family: 'Inconsolata', courier, monospace;
 }
@@ -62,16 +64,17 @@
 header {
   @include monoSp;
 
+
   .logo1 {
-    -webkit-animation: name 2s linear;
-    animation: name 2s linear;
+    -webkit-animation: name 1s linear;
+    animation: name 1s linear;
     top: 0;
     left: 0;
   }
 
   .logo2 {
-    -webkit-animation: title 2s linear;
-    animation: title 2s linear;
+    -webkit-animation: title 1s linear;
+    animation: title 1s linear;
     top: 70px;
     left: -45%;
   }
@@ -115,10 +118,25 @@ header {
 /* =============================================================================
             Portfolio Body
    ========================================================================== */
+
+
 .aboutMe {
+
+  p.downArrow {
+    display: inline-block;
+    margin-top: 20vh;
+    font-size: 3rem;
+  }
+
   img {
     width: 100%;
   }
+}
+
+p.builtWith {
+  margin-top: 15px;
+  margin-bottom: 0px;
+  font-size: 1rem;
 }
 
 .home {
@@ -149,29 +167,34 @@ header {
         padding-right: 1%;
         height: 75vh;
         overflow: hidden;
-        border-right: 1px solid black;
-        // opacity: 0.5;
-        -webkit-filter: grayscale(1);
-      }
 
-      .ft-img:hover {
-        -webkit-filter: grayscale(0);
+        .wp-post-image {
+          width:100%;
+          box-shadow: 0 0 3px 3px rgba(100,100,108,0.1);
+        }
       }
 
       .rightInfo {
-        height: 100%;
         width: 40%;
         float: left;
         padding: 20px;
         padding-top: 0;
+        font-size: 1.2rem;
+
+        h2 {
+          margin-top: 1px;
+          text-decoration: underline;
+        }
 
         .tags {
+          padding-top: 0px;
+          margin-top: 0px;
+        
 
           a {
-          padding: 10px;
-          border: 1px solid black;
-          margin-right: 20px;
-          margin-bottom: 10px;
+          font-size: 1rem;
+          padding: 3px;
+          border-bottom: 2px solid RGBA(220, 179, 165, 1);
           display: inline-block;
           }
 
@@ -180,22 +203,19 @@ header {
           }
         } //end tags
 
-        .linkToLive p {
+        .linkToLive p{
           @include monoSp;
-          font-size: 24px;
+          font-size: 1.6rem;
           line-height: 0rem;
-        }
-
-      h2 {
-        text-decoration: underline;
+          border-bottom: none;
         }
       }
     } // end rightInfo
   } // end portfolio pieces
-}  
+}
 
 /* =============================================================================
-                Contact Form Styles
+     Contact Form Styles
    ========================================================================== */
 .contactForm {
     // padding-top: 300px;
@@ -209,6 +229,12 @@ header {
       position: relative;
       left: 100px;
       display: inline-block;
+
+    }
+
+    h3:hover {
+      animation: pulse 4s linear infinite;
+      -webkit-animation: pulse 4s linear infinite;
     }
 }
 
@@ -271,7 +297,6 @@ header {
   }
 }
 
-
 .blog {
   padding: 1px;
 
@@ -323,44 +348,71 @@ header {
 
 footer {
   clear:both;
+  background: RGBA(236, 237, 241, 0.65);
+  margin: 0 auto;
+  width: 100%;
+  box-shadow: 0 0 3px 3px rgba(100,100,108,0.1);
 
   .container-footer {
     display: inline-block;
   
     .footer-logo {
-      width: 26%;
+      width: 60%;
       display: inline-block;
-    }
+      float:left;
+
+      .footLogo {
+        width: 50%;
+      }
+
+      .foot-logo1 {
+        float: left;
+      }
+
+      .foot-logo2 {
+        float: right;
+      }
+    }// end .footer-logo
 
     .bottom-nav {
       display: inline-block;
       float: left;
       text-align: left;
+      width: 25%;
+      transform: translateY(-50%);
 
       ul {
-        padding-left: 0px; 
         font-size: 35px;
         padding: 15px;
-        float: right;
+        padding-left: 0px; 
+        float: left;
         position: relative;
-        left: 100%;
+        margin: 0 auto;
+        transform: translateY(50%);
+
 
         a {
           padding: 15px;
         }       
       }
-    }
+    } // end .bottom-nav
 
-
-    p {
-      margin-bottom: 0px;
+    .upArrow {
+      font-size: 3rem;
+      display: inline-block;
+      margin: 0 auto;
+      // position: relative;
+      // float: left;
+      // transform: translateY(-50%);
+      width: 5%;
+      padding-bottom: 7px;
     }
-  }
+  } // end footer container
 
   .mailList {
     display: inline-block;
   }
-}
+} // end Footer
 
 @import "normalize";
 @import "comments";

@@ -8,7 +8,7 @@ get_header();  ?>
 
 <div class="main clearfix">
   <div class="aboutMe clearfix">
-    <a href="#portfolio smoothScroll"><p class="downArrow smoothScroll">&#10553;</p></a>
+    <a href="#portfolio" class="smoothScroll"><p class="downArrow smoothScroll">&#10553;</p></a>
     
 
      <?php // Start the loop ?>
@@ -33,7 +33,9 @@ get_header();  ?>
          <div class="rightInfo">
            <h2><?php the_title() ?></h2>
            <p><?php the_field( 'short_desc' ); ?></p>
-           <p class="tags"><?php the_terms($post->ID, 'technologies', '', ''); ?></p>
+           <p class="builtWith">// Built with: </p>
+             <div class="inclTags"><p class="tags"><?php the_terms($post->ID, 'technologies', ' ', '+', ' '); ?></p>
+           </div>
            <div class="linkToLive">
              <?php the_field( 'live_link' ) ?>
            </div><!--end .linkToLive-->

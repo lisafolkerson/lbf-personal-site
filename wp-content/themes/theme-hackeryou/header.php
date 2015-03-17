@@ -19,7 +19,7 @@
 
 
 <body <?php body_class(); ?> >
-  <div class="bodyContainer container-with-background clearfix" style="background-image: url(<?php bloginfo('template_directory'); ?>/img/whiteMarble.png)">
+  <div class="bodyContainer container-with-background clearfix" style="background-image: url(<?php bloginfo('template_directory'); ?>/img/whiteMarble.png)" id="top">
     <div class="border b-top"></div>
     <div class="border b-left"></div>
     <div class="border b-right"></div>

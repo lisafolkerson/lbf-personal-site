@@ -4,8 +4,6 @@
 	$image = get_field('footer', 'options');
 	if( !empty($image) ): ?>
 
-		<a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="footer-logo" /></a>
-
 	<?php endif; ?>
 
 	<?php if( have_rows('links', 'options') ) : ?>
@@ -16,12 +14,19 @@
 				<?php endwhile; ?>
 			</ul>
 		</div> <!-- end .bottom-nav-->
+
+		<div class="footer-logo">
+			  <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
+			<img class="footLogo foot-logo1" src="<?php bloginfo('template_directory'); ?>/img/lisaLine.svg" alt="Lisa Folkerson"><img class="footLogo foot-logo2" src="<?php bloginfo('template_directory'); ?>/img/titleLine.svg" alt="Lisa Folkerson"></a>
+		</div><!--end footer-logo-->
+
+		<a href="#top" class="upArrow smoothScroll">&#10548;</a>
 	<?php endif; ?> 
 		<!-- <div class="mailList">
-		<?php // the_field('mailing_list', 'options'); ?>
+		<?php // the_field('mailing_list', 'options'); ?>-->
 
-	    <p>&copy; Lisa Folkerson <?php // echo date('Y'); ?></p>	 -->
-	    </div><!-- end .mailList-->
+
+	    <!-- <p>&copy; Lisa Folkerson --> <?php // echo date('Y'); ?><!-- </p> -->	 	    <!--</div> end .mailList-->
   </div><!--end container-footer-->
 </footer>
 
