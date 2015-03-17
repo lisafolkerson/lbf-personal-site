@@ -2775,8 +2775,8 @@ Copyright (c) 2015 Daniel Eden
     left: 45%; }
 
   100% {
-    top: 0px;
-    left: 0; } }
+    top: 5px;
+    left: -6%; } }
 
 @keyframes name {
   0% {
@@ -2784,8 +2784,8 @@ Copyright (c) 2015 Daniel Eden
     left: 45% px; }
 
   100% {
-    top: 0px;
-    left: 0; } }
+    top: 5px;
+    left: -6%; } }
 
 @-webkit-keyframes title {
   0% {
@@ -2793,7 +2793,7 @@ Copyright (c) 2015 Daniel Eden
     left: -95%; }
 
   100% {
-    top: 70px;
+    top: 12px;
     left: -45%; } }
 
 @keyframes title {
@@ -2802,7 +2802,7 @@ Copyright (c) 2015 Daniel Eden
     left: -95%; }
 
   100% {
-    top: 70px;
+    top: 12px;
     left: -45%; } }
 
 header {
@@ -2979,23 +2979,26 @@ p.builtWith {
   width: 100%;
   display: inline-block;
   font-family: 'Inconsolata', courier, monospace;
+  text-align: left;
   height: 100vh; }
   .blog-entry article {
-    text-align: left;
-    height: 100%;
     width: 40%;
     float: left;
     padding: 20px;
     padding-top: 0;
-    overflow: hidden; }
+    font-size: 1.2rem; }
+    .blog-entry article h2 {
+      margin-top: 1px;
+      text-decoration: underline; }
   .blog-entry .blog-image {
     width: 59%;
     float: left;
     padding-right: 1%;
     height: 75vh;
-    overflow: hidden;
-    border-right: 1px solid black;
-    -webkit-filter: grayscale(1); }
+    overflow: hidden; }
+    .blog-entry .blog-image img {
+      width: 100%;
+      box-shadow: 0 0 3px 3px rgba(100, 100, 108, 0.1); }
   .blog-entry .blog-image:hover {
     -webkit-filter: grayscale(0); }
 

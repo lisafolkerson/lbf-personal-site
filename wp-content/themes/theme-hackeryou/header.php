@@ -2,6 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<?php // Load Meta ?>
+  <link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/lisa-favicon.png"> 
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php  wp_title('|', true, 'right'); ?></title>

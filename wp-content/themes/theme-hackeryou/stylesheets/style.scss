@@ -9,6 +9,23 @@
   font-size: 1.8rem;
 }
 
+@mixin featuredPage {
+      margin-top: 100px;
+      width: 100%;
+      display: inline-block;
+      @include monoSp;
+      text-align: left;
+      height: 100vh;
+}
+
+@mixin featuredImg {
+  width: 59%;
+  float: left;
+  padding-right: 1%;
+  height: 75vh;
+  overflow: hidden;
+}
+
 /* =============================================================================
                    Header
    ========================================================================== */
@@ -45,20 +62,20 @@
 
 @-webkit-keyframes name {
   0%   { top: -171px; left: 45%; }
-  100% { top: 0px; left: 0; }
+  100% { top: 5px; left: -6%; }
 }
 @keyframes name {
     0%   { top: -171px; left: 45%px; }
-    100% { top: 0px; left: 0; }
+    100% { top: 5px; left: -6%; }
   }
 
 @-webkit-keyframes title {
   0%   { top: 171px; left: -95%; }
-  100% { top: 70px; left: -45%; }
+  100% { top: 12px; left: -45%; }
 }
 @keyframes title {
     0%   { top: 171px; left: -95%; }
-    100% { top: 70px; left: -45%; }
+    100% { top: 12px; left: -45%; }
   }
 
 header {
@@ -154,19 +171,11 @@ p.builtWith {
     width: 100%;
 
     .featuredPost {
-      margin-top: 100px;
-      width: 100%;
-      display: inline-block;
-      @include monoSp;
-      text-align: left;
-      height: 100vh;
+      //if edit this; edit .blog-entry
+      @include featuredPage;
 
       .ft-img {
-        width: 59%;
-        float: left;
-        padding-right: 1%;
-        height: 75vh;
-        overflow: hidden;
+        @include featuredImg;
 
         .wp-post-image {
           width:100%;
@@ -307,30 +316,29 @@ p.builtWith {
 }
 
 .blog-entry {
-  margin-top: 100px;
-  width: 100%;
-  display: inline-block;
-  @include monoSp;
-  height: 100vh;
+  //if edit this; edit .featuredPost
+  @include featuredPage;
 
   article {
-    text-align: left;
-    height: 100%;
     width: 40%;
     float: left;
     padding: 20px;
     padding-top: 0;
-    overflow: hidden;
+    font-size: 1.2rem;
+
+    h2 {
+      margin-top: 1px;
+      text-decoration: underline;
+    }
   }
 
   .blog-image {
-    width: 59%;
-    float: left;
-    padding-right: 1%;
-    height: 75vh;
-    overflow: hidden;
-    border-right: 1px solid black;
-    -webkit-filter: grayscale(1);
+    @include featuredImg;
+
+    img {
+      width:100%;
+      box-shadow: 0 0 3px 3px rgba(100,100,108,0.1);
+    }
   }
 
   .blog-image:hover {
