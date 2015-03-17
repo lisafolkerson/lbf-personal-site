@@ -2799,8 +2799,8 @@ Copyright (c) 2015 Daniel Eden
     left: -104%; }
 
   100% {
-    top: 115px;
-    left: 3%; } }
+    top: 120px;
+    left: 1%; } }
 
 @keyframes title {
   0% {
@@ -2808,8 +2808,8 @@ Copyright (c) 2015 Daniel Eden
     left: -104%; }
 
   100% {
-    top: 115px;
-    left: 3%; } }
+    top: 120px;
+    left: 1%; } }
 
 header {
   font-family: 'Inconsolata', courier, monospace; }
@@ -2824,8 +2824,8 @@ header {
   header .logo2 {
     -webkit-animation: title 1s linear;
     animation: title 1s linear;
-    top: 78px;
-    left: 3%; }
+    top: 120px;
+    left: 1%; }
   header .mainLogo {
     max-width: 42%;
     position: absolute; }

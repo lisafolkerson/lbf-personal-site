@@ -78,11 +78,11 @@
 
 @-webkit-keyframes title {
   0%   { top: 144px; left: -104%; }
-  100% { top: 115px; left: 3%; }
+  100% { top: 120px; left: 1%; }
 }
 @keyframes title {
     0%   { top: 144px; left: -104%; }
-    100% { top: 115px; left: 3%; }
+    100% { top: 120px; left: 1%; }
   }
 
 header {
@@ -104,8 +104,8 @@ header {
   .logo2 {
     -webkit-animation: title 1s linear;
     animation: title 1s linear;
-    top: 78px;
-    left: 3%;
+    top: 120px;
+    left: 1%;
   }
 
   .mainLogo {
