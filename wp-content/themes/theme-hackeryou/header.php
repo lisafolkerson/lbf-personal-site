@@ -19,7 +19,7 @@
 </head>
 
 
-<body <?php body_class(); ?> >
+<body <?php body_class('preload'); ?> >
   <div class="bodyContainer container-with-background clearfix" style="background-image: url(<?php bloginfo('template_directory'); ?>/img/whiteMarble.png)" id="top">
     <div class="border b-top"></div>
     <div class="border b-left"></div>
@@ -27,9 +27,12 @@
     <div class="border b-bottom"></div>
     <header>
       <div class="container clearfix">
-          <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <img class="mainLogo logo1" src="<?php bloginfo('template_directory'); ?>/img/lisaLine.svg" alt="Lisa Folkerson"><img class="mainLogo logo2" src="<?php bloginfo('template_directory'); ?>/img/titleLine.svg" alt="Lisa Folkerson"></a>
-            <?php // bloginfo( 'name' ); ?>         
+
+        <div class="main-animater">
+            <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
+          <img class="mainLogo logo1" src="<?php bloginfo('template_directory'); ?>/img/lisaLine.svg" alt="Lisa Folkerson"><img class="mainLogo logo2" src="<?php bloginfo('template_directory'); ?>/img/titleLine.svg" alt="Lisa Folkerson"></a>
+              <?php // bloginfo( 'name' ); ?>
+          </div><!-- end .main-animate-->           
 
         <div class="menu smoothScroll"><?php 
         $menuParameters = array(

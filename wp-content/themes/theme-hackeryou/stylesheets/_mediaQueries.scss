@@ -15,13 +15,38 @@
   		max-width: 100%;
   	}
 }
+
+.blog {
+	.blog-entry {
+		height: inherit;
+
+		article {
+			width: 100%;
+			padding: 0;
+		}
+
+		.blog-image {
+			width: 100%;
+			border-right: none;
+			border-bottom: 1px solid black;
+			height: 50vh;
+			}
+		}
+	} // end .blog-entry
+} // end .blog
+
+
+
   .contactForm {	
 	a {
 	  font-size: 20px;
 	  left: 40px;
 	}
-  }
-} // end #contact
+}
+
+.bottom-nav ul {
+	white-space: nowrap;
+}
 
 /* ===========================================
             7 5 0  P I X E L S 
@@ -78,23 +103,28 @@
 			left: -25px;
 		}
 	}
+	footer {
+		.container-footer {
+			.bottom-nav {
+				float: left;
+				width: 52%;
+				margin-left: 2%;
+				}
 
-	.bottom-nav {
-		float: right;
-		text-align: right;
-		}
+			.footer-logo {
+			  float: left;
+			  width: 35%;
+			}
 
-	footer .container-footer .bottom-nav ul {
-		float: left;
-		margin-right: -40px;
-		position: static;
-		left: 0;
-	}
-	.footer-logo {
-	  float: left;
-	  width: 42%;
-	}
-}
+			.upArrow {
+				margin-right: 6%;
+			}
+		} // end footer-container
+	} // end footer
+} 
+
+
+
 
 /* ========================================
             4 8 0  P I X E L S 
@@ -119,6 +149,10 @@
     0%   { top: 171px; left: -95%; }
     100% { top: -80px; left: 0; }
   }	
+
+  .aboutMe p.downArrow {
+  	display: none;
+  }
 
 	header {
 		.logo1 {
@@ -203,12 +237,19 @@
 					}
 
 				.rightInfo {
+					width: 100%;
+					padding: 10px 0;
+
 					p {
+						// display: none;
+						font-size: 0.9rem;
+					}
+
+					p.builtWith {
 						display: none;
-						font-size: 0.75rem;
 					}
 					p.tags, .linkToLive p{
-						display: inherit;
+						display: none;
 					}
 
 					.linkToLive p {
@@ -227,11 +268,21 @@
 	} // end wpcf7-form
 	} //  end home
 
+	.blog {
+
+	}
+
+
+
 	footer {
 
 		.container-footer {
 
-			img.footer-logo {
+			.footer-logo {
+				display: none;
+			}
+
+			.upArrow {
 				display: none;
 			}
 		}

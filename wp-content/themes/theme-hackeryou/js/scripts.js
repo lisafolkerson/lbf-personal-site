@@ -23,4 +23,8 @@ setInterval(function() {
 
 $(function(){
 	//your jQuery here
+	$("window").load(function() {
+		console.log('loaded');
+	  $("body").removeClass("preload");
+	});
 });

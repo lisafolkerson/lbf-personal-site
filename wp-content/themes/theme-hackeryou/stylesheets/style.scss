@@ -29,6 +29,13 @@
 /* =============================================================================
                    Header
    ========================================================================== */
+.preload * {
+     -webkit-transition: none !important;
+     -moz-transition: none !important;
+     -ms-transition: none !important;
+     -o-transition: none !important;
+   }
+
 .border {
   position: fixed;
   background: #DCB3A5;
@@ -61,44 +68,49 @@
 }
 
 @-webkit-keyframes name {
-  0%   { top: -171px; left: 45%; }
-  100% { top: 5px; left: -6%; }
+  0%   { top: -116px; left: 53%; }
+  100% { top: 20px; left: 14%; }
 }
 @keyframes name {
-    0%   { top: -171px; left: 45%px; }
-    100% { top: 5px; left: -6%; }
+    0%   { top: -116px; left: 53%px; }
+    100% { top: 20px; left: 14%; }
   }
 
 @-webkit-keyframes title {
-  0%   { top: 171px; left: -95%; }
-  100% { top: 12px; left: -45%; }
+  0%   { top: 144px; left: -104%; }
+  100% { top: 115px; left: 3%; }
 }
 @keyframes title {
-    0%   { top: 171px; left: -95%; }
-    100% { top: 12px; left: -45%; }
+    0%   { top: 144px; left: -104%; }
+    100% { top: 115px; left: 3%; }
   }
 
 header {
   @include monoSp;
 
+  .main-animater {
+    position: relative;
+    height: 30vh;
+  }
+
 
   .logo1 {
     -webkit-animation: name 1s linear;
     animation: name 1s linear;
-    top: 0;
-    left: 0;
+    top: 20px;
+    left: 14%;
   }
 
   .logo2 {
     -webkit-animation: title 1s linear;
     animation: title 1s linear;
-    top: 70px;
-    left: -45%;
+    top: 78px;
+    left: 3%;
   }
 
   .mainLogo {
     max-width: 42%;
-    position: relative;
+    position: absolute;
   }
 
   .menu {
@@ -175,6 +187,7 @@ p.builtWith {
       @include featuredPage;
 
       .ft-img {
+        // if edit this: edit .blog-image
         @include featuredImg;
 
         .wp-post-image {
@@ -333,6 +346,7 @@ p.builtWith {
   }
 
   .blog-image {
+    // if edit this: edit .ft-img
     @include featuredImg;
 
     img {
@@ -409,9 +423,6 @@ footer {
       font-size: 3rem;
       display: inline-block;
       margin: 0 auto;
-      // position: relative;
-      // float: left;
-      // transform: translateY(-50%);
       width: 5%;
       padding-bottom: 7px;
     }
